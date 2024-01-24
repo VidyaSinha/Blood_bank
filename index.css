@@ -18,7 +18,7 @@ html{
 }
 .nav {
     background-color: #9b1422;
-    color: #fff;
+    color: #ffffff;
     text-align:left;
     padding: 10px;
     display: flex;
@@ -26,7 +26,7 @@ html{
     justify-content: space-between;
     align-items: center;
 }
-.nav h3{
+/* .nav {
     display: inline-block;
     font-family: "Barlow", sans-serif;
     font-weight: 400;
@@ -34,6 +34,10 @@ html{
     /* margin-left: 150px; */
     /* margin-right: 200px; */
 
+
+
+.nav h3{
+   color: #fbbdae;
 
 }
 
@@ -59,8 +63,8 @@ padding:20px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
-    padding-right: 20px;
+    margin-left: 50px;
+    padding-right: 10px;
     /* display: flex; */
 
 }
@@ -90,8 +94,8 @@ section {
 }
 
 .features {
-    background-color: #F1ECD6;
-    height: 250px;
+    /* background-color: #F1ECD6; */
+    height: 220px;
     overflow: hidden;
     position: relative;
 }
@@ -106,12 +110,37 @@ section {
 }
 
 .features img {
-    height: 250px; /* Fixed height */
+    height: 200px; /* Fixed height */
     width: 99vw; /* 100% of the viewport width */
     object-fit: fill; /* Stretch the image to cover the container without maintaining aspect ratio */
 }
 
+.donate-up {
+    position: absolute;
+    margin-top:8px;
+    /* width: 200px; */
+    top: 56%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 5px 51px;
+    background: #EFE348;
+    color: #600b0b;
+    border: none;
+    
+    border-radius: 5px;
+    font-family: "Volkhov", serif;
+    font-weight: 800;
+   font-size: xx-large;
+    cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+    /* text-decoration: none; */
+}
 
+.donate-up:hover {
+   
+    box-shadow: 0 8px 16px rgba(13, 11, 11, 0.1); /* Add a subtle box shadow on hover for a floating effect */
+}
 .arrows {
     position: absolute;
     top: 50%;
@@ -120,19 +149,24 @@ section {
 
 .arrow {
     font-size: 50px;
+    font-weight: 900;
     background: none;
-    border: none;
-    color: #032020;
+    
+    color: #691f0d;
     cursor: pointer;
+  
 }
 
 .left-arrow {
     left: 10px;
+    margin-left: 20px;
 }
 
 .right-arrow {
     right: 10px;
+    margin-left: 1400px;
 }
+
 
 #slide2:checked ~ .slides {
     transform: translateX(-100%);
@@ -164,7 +198,7 @@ section {
 .run h2 {
    /* padding: 15px; */
    
-  font-family: "Kanit", sans-serif;
+   font-family: "Kanit", sans-serif;
   /* font-weight: 100; */
     width: fit-content;
     font-size:large;
