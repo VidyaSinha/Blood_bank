@@ -206,7 +206,7 @@ section {
     justify-content: center;
     padding: 10px;
     font-weight: 70px;
-    color: rgb(17, 9, 9);
+    color: rgb(241, 235, 235);
     /* overflow: hidden; */
     white-space: nowrap;
     animation: runText 20s linear infinite; /* Adjust the duration as needed */
