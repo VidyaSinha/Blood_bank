@@ -402,9 +402,17 @@ section {
 .vdo video{
  height: 600px;
  padding: 50px;
- align-items: center;
-margin-left:400px ;
+ /* align-items: center; */
+ 
+ 
+/* margin-left:400px ; */
 }
+
+.vdo{
+    padding: 45px;
+    display: flex;
+}
+
 .thala {
     background-color: #674c45;
     color: #fdfdfd;
@@ -427,7 +435,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #dddddd;
+    border: 3px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
