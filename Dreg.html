@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Registration</title>
+    <link rel="stylesheet" href="Dreg.css">
+</head>
+<body>
+    <div class="donate-registration">
+        <h1>
+            Donate Now
+        </h1>
+        <h4>Your contribution can make a difference</h4>
+        <form>
+            <label>Full Name</label>
+            <input type="text" name="fullname" required><br/>
+            <label>Email</label>
+            <input type="email" name="email" required><br/>
+            <label>Contact Number</label>
+            <input type="tel" name="phone" required><br/>
+            <label>Address</label>
+            <input type="text" name="address" required><br/>
+            <label>Donation Amount</label>
+            <input type="number" name="amount" required><br/>
+            <label>Payment Method</label>
+            <select name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <!-- Add more payment options as needed -->
+            </select><br/>
+            <label>Card Number</label>
+            <input type="text" name="card-number" required><br/>
+            <label>Expiration Date</label>
+            <input type="text" name="expiration-date" placeholder="MM/YYYY" required><br/>
+            <label>CVV</label>
+            <input type="password" name="cvv" required>
+            <input type="submit" name="submit" value="Donate Now">
+        </form>
+        <p>By clicking the donate button, you agree to our <br>
+        <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+        </p>
+        <p>Want to make a difference? <a href="#">Join Our Volunteer Program</a></p>
+    </div>
+</body>
+</html>
