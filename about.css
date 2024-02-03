@@ -89,3 +89,26 @@ padding:20px;
 
 
 }
+
+.firsttitle{
+    margin-top: 50px;
+    height: 20px;
+    text-align: center;
+    /* font-style:; */
+    /* background-color: #fbbdae; */
+    
+}
+.first{
+    padding: 2vw;
+    text-align: center;
+    justify-content: center;
+}
+.second{
+    background-color: rgb(227, 221, 221);
+    flex: 0 0 auto;
+    height: 300px;
+    border: 2px solid #c4bebf;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 70px;
+}
