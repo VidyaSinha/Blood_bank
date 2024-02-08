@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet');
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -416,24 +417,25 @@ section {
     
 
 .thala {
-    background-color: #674c45;
-    color: #fdfdfd;
+    /* background-color: #674c45; */
+    color: #5d0a0a;
     text-align: center;
-    padding: 2px;
+    /* padding: 2px; */
      font-family: "Kalam", cursive;
   font-weight: 300;
+  font-size: 2vw;
 }
 
 .table-container {
     margin: 20px auto;
     max-width: 600px;
-    padding: 50px 50px;
+    padding: 5px 5px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 th, td {
@@ -488,6 +490,45 @@ font-family: "Lemon", serif;
 color: #964444;
 /* font-size: xx-large; */
 }
+.rand {
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    /* height: 100%;
+    width: 58%; */
+    /* background-color: azure; */
+    /* padding: 2vw 4vw; */
+}
+
+.rand img {
+    width: 650px;
+}
+
+.rand h1 {
+    color: #85202b;
+    margin-left: 100px;
+    font-size: 2.8vw;
+    font-family: "DM Serif Display", serif;
+}
+.randleft{
+    justify-content: center;
+    margin-bottom:150px;
+    margin-top: 0;
+}
+.randleft button {
+    background-color: #85202b;
+    color: whitesmoke;
+    width: 150px;
+    height: 40px;
+    /* margin-top: 1vw; */
+    margin-left: 100px;
+    /* margin-bottom: 100px; */
+    /* margin-bottom: 2vw; */
+     /* Resetting margin-top */
+    /* margin-left: 100px; Adjust this value based on your layout */
+}
+
+
 ul {
     list-style-type: none;
 }
