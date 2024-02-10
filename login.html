@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blood Donor Registration</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="signup">
-        <h1>
-            Sign up
-        </h1>
-        <h4>It's free and it only take a minute</h4>
-        <form>
+        <h1>Register as a Blood Donor</h1>
+        <!-- Step 1: Basic Information -->
+        <form id="step1">
             <label>First Name</label>
-            <input type="text" name="" required><br/>
+            <input type="text" name="first_name" required><br>
             <label>Last Name</label>
-            <input type="text" name="" required><br/>
+            <input type="text" name="last_name" required><br>
             <label>Gender</label>
-            <input type="text" name="" required><br/>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
             <label>Contact Address</label>
-            <input type="text" name="" required><br/>
-            <label>Address</label>
-            <input type="text" name="" required><br/>
+            <input type="text" name="contact_address" required><br>
+            <label>Permanent Address</label>
+            <input type="text" name="permanent_address" required><br>
             <label>Email</label>
-            <input type="text" name="" required><br/>
+            <input type="email" name="email" required><br>
             <label>Password</label>
-            <input type="password" name="" required>
-            <input type="submit" name="" value="Submit">
+            <input type="password" name="password" required><br>
+            <button onclick="nextStep()">Next</button>
         </form>
-        <p>By clicking the sign up button, you agree to our <br>
-        <a href="">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        <!-- Step 2: Upload Medical History -->
+        <form id="step2" style="display: none;">
+            <h2>Upload Medical History</h2>
+            <label for="medical_history">Upload PDF:</label>
+            <input type="file" id="medical_history" name="medical_history" accept=".pdf" required><br>
+            <label for="other_documents">Other Documents (if any):</label>
+            <input type="file" id="other_documents" name="other_documents" accept=".pdf"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p>By clicking the sign-up button, you agree to our <br>
+        <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
         </p>
         <p>Already have an account? <a href="#">Login Here</a></p>
     </div>
+
+    <script>
+        function nextStep() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

@@ -1,66 +1,64 @@
-body{
-background-color: rgb(187, 110, 110);
-    /* background: url(download\ \(5\).jpeg); */
-    /* background-repeat: no-repeat; */
-    height: 100px;
-    width: 100%;
+body {
+    background-color: rgb(187, 110, 110);
     font-family: 'Times New Roman', Times, serif;
 }
 
-.signup{
+.signup {
     width: 360px;
-    height: 800px;
-    margin: auto;
+    height: auto; /* Adjusted height to fit content */
+    margin: 100px auto; /* Centering vertically */
     background-color: rgb(210, 214, 218);
     border-radius: 5px;
+    padding: 20px; /* Added padding for better spacing */
 }
 
-h1{
+h1 {
     text-align: center;
 }
-h4{
+
+h4 {
     text-align: center;
     padding-top: 15px;
 }
 
-form{
-    width: 300px;
-    margin-left: 20px;
+form {
+    margin-top: 20px; /* Adjusted margin for spacing */
 }
 
-form label{
-    display: flex;
-    margin-top: 20px;
+form label {
+    display: block; /* Changed to block for better layout */
+    margin-bottom: 5px; /* Adjusted margin for spacing */
     font-size: 18px;
 }
 
-form input{
+form input,
+form select {
     width: 100%;
     padding: 7px;
-    border: none;
     border: 1px solid grey;
     border-radius: 6px;
     outline: none;
+    margin-bottom: 20px; /* Adjusted margin for spacing */
 }
 
-input[type="submit"]{
-    width: 320px;
+input[type="submit"] {
+    width: 100%; /* Adjusted width to fit container */
     height: 35px;
     margin-top: 20px;
-    border: none;
     background-color: rgb(160, 118, 102);
     color: white;
     font-size: 18px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover{
-    color: white;
+input[type="submit"]:hover {
     background: rgb(223, 50, 27);
 }
 
-p{
+p {
     text-align: center;
-    padding-top:20px ;
     font-size: 15px;
+    margin-top: 20px; /* Adjusted margin for spacing */
 }
