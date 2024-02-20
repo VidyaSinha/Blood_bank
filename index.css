@@ -116,32 +116,7 @@ section {
     object-fit: fill; /* Stretch the image to cover the container without maintaining aspect ratio */
 }
 
-.donate-up {
-    position: absolute;
-    margin-top:8px;
-    /* width: 200px; */
-    top: 56%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    padding: 5px 51px;
-    background: #EFE348;
-    color: #600b0b;
-    border: none;
-    
-    border-radius: 5px;
-    font-family: "Volkhov", serif;
-    font-weight: 800;
-   font-size: xx-large;
-    cursor: pointer;
-    text-decoration: none;
-    transition: box-shadow 0.3s ease;
-    /* text-decoration: none; */
-}
 
-.donate-up:hover {
-   
-    box-shadow: 0 8px 16px rgba(13, 11, 11, 0.1); /* Add a subtle box shadow on hover for a floating effect */
-}
 .arrows {
     position: absolute;
     top: 50%;
@@ -173,9 +148,9 @@ section {
     transform: translateX(-100%);
 }
 
-#slide3:checked ~ .slides {
+/* #slide3:checked ~ .slides {
     transform: translateX(-200%);
-}
+} */
 
 
 @keyframes runText {
