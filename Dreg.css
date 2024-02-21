@@ -1,68 +1,64 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(187, 110, 110);
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.donate-registration {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.signup {
+    width: 450px;
+    height: auto; /* Adjusted height to fit content */
+    margin: 100px auto; /* Centering vertically */
+    background-color: rgb(210, 214, 218);
+    border-radius: 5px;
+    padding: 20px; /* Added padding for better spacing */
 }
 
 h1 {
-    color: #333;
+    text-align: center;
 }
 
 h4 {
-    color: #666;
-    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 15px;
 }
 
 form {
-    display: grid;
-    gap: 15px;
+    margin-top: 20px; /* Adjusted margin for spacing */
 }
 
-label {
-    font-weight: bold;
-    color: #333;
+form label {
+    display: block; /* Changed to block for better layout */
+    margin-bottom: 5px; /* Adjusted margin for spacing */
+    font-size: 18px;
 }
 
-input,
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+form input,
+form select {
+    width: 90%;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 20px; /* Adjusted margin for spacing */
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
+    width: 100%; /* Adjusted width to fit container */
+    height: 35px;
+    margin-top: 20px;
+    background-color: rgb(160, 118, 102);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background: rgb(223, 50, 27);
 }
 
 p {
-    margin-top: 20px;
-    color: #666;
-    font-size: 14px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px; /* Adjusted margin for spacing */
 }
