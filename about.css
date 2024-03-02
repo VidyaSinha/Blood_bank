@@ -112,3 +112,12 @@ padding:20px;
     padding: 20px;
     margin: 0 70px;
 }
+
+.faq{
+    padding:8%;
+    /* margin-top: 5%; */
+}
+.faq h2{
+   text-align: center;
+   font-size: xx-large;
+}
