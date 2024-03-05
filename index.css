@@ -57,7 +57,7 @@ padding:20px;
     /* margin-left: 20px; */
      /* font-size: xx-large; */
     font-family: "El Messiri", sans-serif;
-    margin-right: 300px;
+    margin-right: 200px;
 
 
 }
@@ -557,7 +557,7 @@ footer a{
     box-shadow: 0 0 10px rgba(244, 237, 237, 0.3);
 }
 
-@media (max-width:600px) {
+@media (max-width:500px) {
     .nav {
         background-color: #9b1422;
         color: #ffffff;
