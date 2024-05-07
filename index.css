@@ -587,6 +587,7 @@ footer a{
         padding: 10px;
         display: flex;
         height: 50px;
+        width:380px;
         /* justify-content: space-between; */
         align-items: center;
     }
@@ -637,6 +638,58 @@ footer a{
 .red-box3 h2 {
    font-size: small;
    padding: 0%;
+}
+.slide img{
+    height: 110px;
+    width:100%;
+}
+.features{
+    height: 120px;
+}
+.arrow {
+    font-size: 20px;
+    font-weight: 900;
+    background: none;
+    
+    color: #0c0808;
+    cursor: pointer;
+  
+}
+
+.left-arrow {
+    left: 10px;
+    margin-left: 20px;
+}
+
+.right-arrow {
+    right: 10px;
+    margin-left: 300px;
+}
+
+.run{
+width: 400px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+   
+}
+.run h2 {
+   /* padding: 15px; */
+   
+   font-family: "Kanit", sans-serif;
+  /* font-weight: 100; */
+    width: fit-content;
+    font-size:medium;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 50px;
+    color: rgb(241, 235, 235);
+    /* overflow: hidden; */
+    white-space: nowrap;
+    animation: runText 20s linear infinite; /* Adjust the duration as needed */
 }
 
 }
