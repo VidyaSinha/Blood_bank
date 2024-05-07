@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Data Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form action="insert_donation_data.php" method="post">
+                    <div class="form-group">
+                        <label>Donor Type*</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="voluntary" name="donor_type[]" value="Voluntary">
+                            <label class="form-check-label" for="voluntary">Voluntary</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="replacement" name="donor_type[]" value="Replacement">
+                            <label class="form-check-label" for="replacement">Replacement</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Directed" name="donor_type[]" value="Replacement">
+                            <label class="form-check-label" for="Directed">Directed</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Replacement External" name="donor_type[]" value="Replacement">
+                            <label class="form-check-label" for="Replacement External">Replacement External</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Family" name="donor_type[]" value="Replacement">
+                            <label class="form-check-label" for="Family">Family</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Autologous" name="donor_type[]" value="Replacement">
+                            <label class="form-check-label" for="Autologous">Autologous</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label>Donation Type*</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="leucaperesis" name="donation_type[]" value="Leucaperesis">
+                            <label class="form-check-label" for="leucaperesis">Leucaperesis</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="plasmapheresis" name="donation_type[]" value="Plasmapheresis">
+                            <label class="form-check-label" for="plasmapheresis">Plasmapheresis</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Plateletpheresis" name="donation_type[]" value="Plasmapheresis">
+                            <label class="form-check-label" for="Plateletpheresis">Plateletpheresis</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Whole blood" name="donation_type[]" value="Plasmapheresis">
+                            <label class="form-check-label" for="Whole blood">Whole blood</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Component Type*</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="cryo_poor_plasma" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="cryo_poor_plasma">Cryo Poor Plasma</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="leukoreduced_rbc" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="leukoreduced_rbc">Leukoreduced RBC</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="cryo_poor_plasma" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="cryo_poor_plasma">Cryo Poor Plasma</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="platelet_rich_plasma" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="platelet_rich_plasma">Platelet Rich Plasma</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="single_donor_plasma" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="single_donor_plasma">Single Donor Plasma</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="cryoprecipitate" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="cryoprecipitate">Cryoprecipitate</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="packed_red_blood_cells" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="packed_red_blood_cells">Packed Red Blood Cells</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="platelets_additive_solutions" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="platelets_additive_solutions">Platelets additive solutions</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="single_donor_platelet" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="single_donor_platelet">Single Donor Platelet</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="fresh_frozen_plasma" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="fresh_frozen_plasma">Fresh Frozen Plasma</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="random_donor_platelets" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="random_donor_platelets">Random Donor Platelets</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="whole_blood" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="whole_blood">Whole Blood </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="irradiated_rbc" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="irradiated_rbc">Irradiated RBC</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="platelet_concentrate" name="component_type[]" value="Leukoreduced RBC">
+                            <label class="form-check-label" for="platelet_concentrate">Platelet Concentrate</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sagm_packed_red_blood_cells" name="component_type[]" value="Cryo Poor Plasma">
+                            <label class="form-check-label" for="sagm_packed_red_blood_cells">Sagm Packed Red Blood Cells</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bag Size*</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="single" name="bag_size[]" value="Single (350/450ml)">
+                            <label class="form-check-label" for="single">Single (350/450ml)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="double" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="double">Double (350/450ml)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="triple" name="bag_size[]" value="Single (350/450ml)">
+                            <label class="form-check-label" for="triple">Triple (350/450ml)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="quadruple_with_inline_filter" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="quadruple_with_inline_filter">Quadruple (450 ml) with inline filter</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="single" name="bag_size[]" value="Single (350/450ml)">
+                            <label class="form-check-label" for="single">Single (350/450ml)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="quadruple_without_inline_filter" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="quadruple_without_inline_filter">Quadruple (450 ml) without inline filter</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="penta" name="bag_size[]" value="Single (350/450ml)">
+                            <label class="form-check-label" for="penta">Penta Bag (450 ml)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="transfer_bags" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="transfer_bags">Transfer Bags</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="apheresis_kits" name="bag_size[]" value="Single (350/450ml)">
+                            <label class="form-check-label" for="apheresis_kits">Apheresis Kits</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="triple_350_ml_cdp/sagm" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="triple_350_ml_cdp/sagm">Triple (350 MI) CPD/SAGM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="triple_450_ml_cdp/sagm" name="bag_size[]" value="Double (350/450ml)">
+                            <label class="form-check-label" for="triple_450_ml_cdp/sagm">Triple (450 MI) CPD/SAGM</label>
+                        </div>
+                        
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

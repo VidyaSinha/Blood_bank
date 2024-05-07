@@ -1,64 +1,11 @@
-body {
-    background-color: rgb(187, 110, 110);
-    font-family: 'Times New Roman', Times, serif;
+/* Styles for Image Slider */
+.slider {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.signup {
-    width: 450px;
-    height: auto; /* Adjusted height to fit content */
-    margin: 100px auto; /* Centering vertically */
-    background-color: rgb(210, 214, 218);
-    border-radius: 5px;
-    padding: 20px; /* Added padding for better spacing */
+.slider img {
+    width: 100%;
 }
 
-h1 {
-    text-align: center;
-}
-
-h4 {
-    text-align: center;
-    padding-top: 15px;
-}
-
-form {
-    margin-top: 20px; /* Adjusted margin for spacing */
-}
-
-form label {
-    display: block; /* Changed to block for better layout */
-    margin-bottom: 5px; /* Adjusted margin for spacing */
-    font-size: 18px;
-}
-
-form input,
-form select {
-    width: 90%;
-    padding: 7px;
-    border: 1px solid grey;
-    border-radius: 6px;
-    outline: none;
-    margin-bottom: 20px; /* Adjusted margin for spacing */
-}
-
-input[type="submit"] {
-    width: 100%; /* Adjusted width to fit container */
-    height: 35px;
-    margin-top: 20px;
-    background-color: rgb(160, 118, 102);
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background: rgb(223, 50, 27);
-}
-
-p {
-    text-align: center;
-    font-size: 15px;
-    margin-top: 20px; /* Adjusted margin for spacing */
-}
+/* Form styles (add your styles here) */

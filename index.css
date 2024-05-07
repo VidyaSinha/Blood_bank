@@ -22,6 +22,9 @@ body {
 html{
     scroll-behavior: smooth;
 }
+.main{
+    position:relative
+}
 .nav {
     background-color: #9b1422;
     color: #ffffff;
@@ -29,6 +32,7 @@ html{
     width: 100%;
     padding: 1%;
     display: flex;
+    /* position: relative; */
     height: 10vh;
     /* justify-content: space-between; */
     align-items: center;
@@ -43,14 +47,6 @@ html{
 
 
 
-.nav h3{
-   color: #fbbdae;
-   /* background-color: wheat; */
-   text-align: left;
-   padding-left: 8%;
-
-
-}
 
 .nav img{
     height: 50px;
@@ -110,7 +106,7 @@ padding:20px;
 }
 .navtabs{
     /* background-color: #343a40; */
-    margin-left: 250px;
+    margin-left: 40%;
 }
 section {
     padding: 30px;
@@ -134,7 +130,7 @@ section {
 
 .features img {
     height: 200px; /* Fixed height */
-    width: 99vw; /* 100% of the viewport width */
+    width: 100%; /* 100% of the viewport width */
     object-fit: fill; /* Stretch the image to cover the container without maintaining aspect ratio */
 }
 
@@ -512,18 +508,28 @@ color: #964444;
     margin-bottom:150px;
     margin-top: 0;
 }
-.randleft button {
+.randleft a {
+    margin-left: 100px;
+    display: inline-block; /* Ensuring it behaves like a block element */
+    padding: 10px 20px; /* Adding padding for spacing inside the button */
     background-color: #85202b;
     color: whitesmoke;
     width: 150px;
     height: 40px;
-    /* margin-top: 1vw; */
-    margin-left: 100px;
-    /* margin-bottom: 100px; */
-    /* margin-bottom: 2vw; */
-     /* Resetting margin-top */
-    /* margin-left: 100px; Adjust this value based on your layout */
+    border: 2px solid black; /* Adding border for button outline */
+    border-radius: 5px; /* Adding border radius for rounded corners */
+    text-align: center; /* Centering text horizontally */
+    text-decoration: none; /* Removing underline from anchor */
+    line-height: 40px; /* Centering text vertically */
+    font-size: 16px; /* Adjusting font size */
+    cursor: pointer; /* Changing cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Adding transition effect */
 }
+
+.randleft a:hover {
+    background-color: #6e161d; /* Darken background color on hover */
+}
+
 
 
 ul {
@@ -569,54 +575,68 @@ footer a{
     box-shadow: 0 0 10px rgba(244, 237, 237, 0.3);
 }
 
-@media (max-width:500px) {
+@media (max-width:400px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     .nav {
         background-color: #9b1422;
         color: #ffffff;
-        text-align:left;
-        padding: 5px;
-        width:100%;
-        /* flex-direction: column; */
-        height: 12vh;
-        /* overflow: hidden; */
+        /* text-align:left; */
+        padding: 10px;
+        display: flex;
+        height: 50px;
         /* justify-content: space-between; */
         align-items: center;
     }
-   
+
+    
+    .nav h1{
+       color: #fad7ceed;
+    
+    }
     
     .nav img{
-        height: 30px;
-        width: 30px;
+        height:4vh;
+        width: 8vw;
     border-radius: 50%;
     padding:20px;
     }
     .nav h1{
-        width: 50px;
         /* margin-left: 20px; */
          /* font-size: xx-large; */
         font-family: "El Messiri", sans-serif;
-        /* margin-left: 1px; */
-        font-size: 5vw;
-      margin-bottom: 20px;
+        margin-right: 300px;
+        font-size: 3vh;
     
+    
+      }
+    
+    
+    .navtabs a {
+    display: block;
     }
-    .nav i{
-        font-size:4vw;
-        display:block;
+    .data{
+    flex-direction: column;
     }
-    
-.nav h3{
-    font-size:3vw;
-    text-align: left;
-    /* flex-direction: start; */
-   /* display:flex */
+    .red-box1,
+.red-box2,
+.red-box3 {
+    height: 350px;
+    width: 300px;
 }
-    
-.navtabs{
-    margin-left: 2px;
-    /* display: none; */
+.red-box1 li ,
+.red-box2 li ,
+.red-box3 li {
+   font-size: small;
+   padding: 0%;
 }
-  
-    
-   
+.red-box1 h2 ,
+.red-box2 h2 ,
+.red-box3 h2 {
+   font-size: small;
+   padding: 0%;
+}
+
 }
