@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Form</title>
+    <link rel="stylesheet" href="donor.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Add a brief message to inform users about the purpose of the form -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><b>This form collects basic information from you before you proceed to donate blood. Please fill it out accurately. Thank you for your willingness to donate!</b></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="multiStepForm" action="donor.php" method="post">
+                    <div id="step1" class="form-step">
+                        <!-- Step 1: Blood type, Weight, Last Donation Date -->
+                        <!-- Blood Type -->
+                        <div class="form-group">
+                            <label for="bloodType">Blood Type:</label>
+                            <select class="form-control" id="bloodType" name="bloodType" required>
+                                <option value="">Select</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <!-- Add other blood types -->
+                            </select>
+                        </div>
+                        <!-- Weight -->
+                        <div class="form-group">
+                            <label for="weight">Weight (in kg):</label>
+                            <input type="number" class="form-control" id="weight" name="weight" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bloodUnits">Number of Blood Units you want to donate:</label>
+                            <input type="number" class="form-control" id="bloodUnits" name="bloodUnits" required>
+                        </div>
+                    
+
+                        <!-- First Time Donor -->
+                        <div class="form-group">
+                            <label for="firstTimeDonor">Is this your first time donating blood?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="firstTimeYes" name="firstTimeDonor" value="Yes" required>
+                                <label class="form-check-label ml-2" for="firstTimeYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="firstTimeNo" name="firstTimeDonor" value="No" required>
+                                <label class="form-check-label ml-2" for="firstTimeNo">No</label>
+                            </div>
+                        </div>
+                        <!-- Last Donation Date -->
+                        <div class="form-group" id="donationDateField" style="display: none;">
+                            <label for="lastDonationDate">Last Donation Date:</label>
+                            <input type="date" class="form-control" id="lastDonationDate" name="lastDonationDate">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-next">Next</button>
+                    </div>
+
+                    <div id="step2" class="form-step" style="display: none;">
+                        
+
+
+                        <!-- Medical History -->
+                        <div class="form-group">
+                            <label for="medicalHistory">Do you suffer from or have suffered from any of the following diseases?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="heartDisease" name="diseases[]" value="Heart Disease">
+                                <label class="form-check-label" for="heartDisease">Heart Disease</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="diabetes" name="diseases[]" value="Diabetes">
+                                <label class="form-check-label" for="diabetes">Diabetes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="std" name="diseases[]" value="Sexually Transmitted Diseases">
+                                <label class="form-check-label" for="std">Sexually Transmitted Diseases</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="lungDisease" name="diseases[]" value="Lung Disease">
+                                <label class="form-check-label" for="lungDisease">Lung Disease</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="allergicDisease" name="diseases[]" value="Allergic Disease">
+                                <label class="form-check-label" for="allergicDisease">Allergic Disease</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="epilepsy" name="diseases[]" value="Epilepsy (Charay rog)">
+                                <label class="form-check-label" for="epilepsy">Epilepsy (Charay rog)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="jaundice" name="diseases[]" value="Jaundice (last one year)">
+                                <label class="form-check-label" for="jaundice">Jaundice (last one year)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="faintingSpells" name="diseases[]" value="Fainting spells">
+                                <label class="form-check-label" for="faintingSpells">Fainting spells</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cancer" name="diseases[]" value="Cancer/Malignant Disease">
+                                <label class="form-check-label" for="cancer">Cancer/Malignant Disease</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hepatitis" name="diseases[]" value="Hepatitis B/C">
+                                <label class="form-check-label" for="hepatitis">Hepatitis B/C</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="typhoid" name="diseases[]" value="Typhoid (last on year)">
+                                <label class="form-check-label" for="typhoid">Typhoid (last on year)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="tuberculosis" name="diseases[]" value="Tuberculosis">
+                                <label class="form-check-label" for="tuberculosis">Tuberculosis</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="kidneyDisease" name="diseases[]" value="Kidney Disease">
+                                <label class="form-check-label" for="kidneyDisease">Kidney Disease</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="bleedingTendency" name="diseases[]" value="Abnormal Bleeding tendency">
+                                <label class="form-check-label" for="bleedingTendency">Abnormal Bleeding tendency</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="malaria" name="diseases[]" value="Malaria (six months)">
+                                <label class="form-check-label" for="malaria">Malaria (six months)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="none" name="diseases[]" value="None">
+                                <label class="form-check-label" for="none">None</label>
+                            </div>
+                            <!-- Add other diseases checkboxes -->
+                        </div>
+                        <button type="button" class="btn btn-primary btn-prev">Previous</button>
+                        <button type="button" class="btn btn-primary btn-next">Next</button>
+                        
+                    </div>
+
+                    
+<div id="step3" class="form-step" style="display: none;">
+    <!-- Medications -->
+    <div class="form-group">
+        <label for="medicationHistory">Are you taking or have you taken any of these in the past 72 hours?</label>
+        <!-- Add medication checkboxes -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="antibiotics" name="medications[]" value="Antibiotics">
+            <label class="form-check-label" for="antibiotics">Antibiotics</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="aspirin" name="medications[]" value="Aspirin">
+            <label class="form-check-label" for="aspirin">Aspirin</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="alcohol" name="medications[]" value="Alcohol">
+            <label class="form-check-label" for="alcohol">Alcohol</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="steroids" name="medications[]" value="Steroids">
+            <label class="form-check-label" for="steroids">Steroids</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="vaccinations" name="medications[]" value="Vaccinations">
+            <label class="form-check-label" for="vaccinations">Vaccinations</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rabiesVaccine" name="medications[]" value="Dog bite Rabies vaccine (1 year)">
+            <label class="form-check-label" for="rabiesVaccine">Dog bite Rabies vaccine (1 year)</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noneMedication" name="medications[]" value="None">
+            <label class="form-check-label" for="noneMedication">None</label>
+        </div>
+    </div>
+
+    <!-- Surgery/Transfusion History -->
+    <div class="form-group">
+        <label for="surgeryTransfusion">Is there any history of surgery or blood transfusion in the past six months?</label>
+        <!-- Add surgery/transfusion options -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="majorSurgery" name="surgeryTransfusion[]" value="Major">
+            <label class="form-check-label" for="majorSurgery">Major Surgery</label>
+        </div>
+        <!-- Add other surgery/transfusion options -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bloodTransfusion" name="surgeryTransfusion[]" value="Blood Transfusion">
+            <label class="form-check-label" for="bloodTransfusion">Blood Transfusion</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="minorSurgery" name="surgeryTransfusion[]" value="Minor">
+            <label class="form-check-label" for="minorSurgery">Minor Surgery</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noneSurgeryTransfusion" name="surgeryTransfusion[]" value="None">
+            <label class="form-check-label" for="noneSurgeryTransfusion">None</label>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-prev">Previous</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add event listener for the first time donor checkbox
+            const firstTimeYes = document.getElementById("firstTimeYes");
+            const firstTimeNo = document.getElementById("firstTimeNo");
+            const donationDateField = document.getElementById("donationDateField");
+
+            firstTimeYes.addEventListener("change", function () {
+                // Show or hide the donation date field based on the checkbox state
+                donationDateField.style.display = this.checked ? "none" : "block";
+            });
+
+            firstTimeNo.addEventListener("change", function () {
+                // Show or hide the donation date field based on the checkbox state
+                donationDateField.style.display = this.checked ? "block" : "none";
+            });
+
+            const prevBtns = document.querySelectorAll(".btn-prev");
+            const nextBtns = document.querySelectorAll(".btn-next");
+            const formSteps = document.querySelectorAll(".form-step");
+
+            let formStepIndex = 0;
+
+            nextBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    formStepIndex++;
+                    updateFormSteps();
+                });
+            });
+
+            prevBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    formStepIndex--;
+                    updateFormSteps();
+                });
+            });
+
+            function updateFormSteps() {
+                formSteps.forEach((step, index) => {
+                    if (index === formStepIndex) {
+                        step.style.display = "block";
+                    } else {
+                        step.style.display = "none";
+                    }
+                });
+
+                // Show or hide next/prev buttons based on current step
+                if (formStepIndex === 0) {
+                    prevBtns.forEach((btn) => {
+                        btn.style.display = "none";
+                    });
+                } else {
+                    prevBtns.forEach((btn) => {
+                        btn.style.display = "inline-block";
+                    });
+                }
+
+                if (formStepIndex === formSteps.length - 1) {
+                    nextBtns.forEach((btn) => {
+                        btn.style.display = "none";
+                    });
+                } else {
+                    nextBtns.forEach((btn) => {
+                        btn.style.display = "inline-block";
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
