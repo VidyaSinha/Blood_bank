@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (/* Password is authenticated */) {
         // Redirect to the user account page
-        header("Location: account.php");
+        header("Location: user.html");
         exit();
     } else {
         // Password authentication failed, display error message or handle accordingly
