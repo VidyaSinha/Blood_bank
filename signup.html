@@ -3,23 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
     <title>Signup Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            
+        .navbar-brand {
+            font-size: 30px; /* Adjust the font size as needed */
         }
+   
+        .navbar.bg-dark {
+            background-color: #9b1422 !important;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="logo" width="50" height="50">
+            BloodOasis
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="donor.html">Donate Blood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LFB.html">Looking for Blood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign-in</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+ 
+        .navbar-brand {
+            margin-left: 20px;
+           
+            font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+        }
+        .navbar-brand img {
+            margin-right: 10px;
+            border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
+        }
+        
         .main{
             display: flex;
         }
-        .image{
-            background-image: url(blood3.jpg);
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        .image img {
+            height: 87%;
+            width: 100%;
+            object-fit: cover;
         }
         .form-container {
-            width: 300px;
+            width: 800px !important;
             margin: 0 auto;
+            height: 100vh;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 5px;
@@ -56,7 +108,7 @@
             resize: vertical;
         }
         .form-button {
-            background-color: #007bff;
+            background-color: #952c2a;
             color: #fff;
             padding: 10px 15px;
             border: none;
@@ -65,7 +117,7 @@
             transition: background-color 0.3s;
         }
         .form-button:hover {
-            background-color: #0056b3;
+            background-color: #05172a;
         }
         .form-button:disabled {
             background-color: #ccc;
@@ -83,7 +135,7 @@
 
    
 <div class="image">
-    <img src="blood3.jpg" alt="" srcset="">
+    <img src="loginpic.jpg" alt="" srcset="">
 </div>
 <div class="form-container" id="signupForm">
     <h2>Sign Up</h2>

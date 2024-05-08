@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
     text-align: center;
     margin: 50px;
 }
@@ -8,9 +8,11 @@ body {
 .login-container {
     width: 300px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #9d7575;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 6%;
+   color: #fff;
+    margin-top: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,7 +35,7 @@ body {
 }
 
 .login-button {
-    background-color: #007bff;
+    background-color: #812424;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -42,7 +44,7 @@ body {
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background-color: #08090a;
 }
 
 p {
@@ -51,9 +53,28 @@ p {
 
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #060f1b;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.navbar-brand {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+.navbar.bg-dark {
+    background-color: #9b1422 !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+    
+.navbar-brand {
+    margin-left: 20px;
+   
+    font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
 }
