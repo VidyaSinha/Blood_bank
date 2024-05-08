@@ -4,7 +4,6 @@ $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
 
-
 // Create connection
 $conn = new mysqli($servername . ':' . $port, $username, $password, $database);
 

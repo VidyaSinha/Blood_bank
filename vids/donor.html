@@ -147,69 +147,67 @@
                         
                     </div>
 
-                    <div id="step3" class="form-step" style="display: none;">
-                        <!-- Step 3: Medications, Surgery/Transfusion History -->
-                        <!-- Medications -->
-                        <div class="form-group">
-                            <label for="medicationHistory">Are you taking or have you taken any of these in the past 72 hours?</label>
-                            <!-- Add medication checkboxes -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="antibiotics" name="medicationHistory" value="Antibiotics">
-                                <label class="form-check-label" for="antibiotics">Antibiotics</label>
-                            </div>
-                            <!-- Add other medication options -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="antibiotics" name="medicationHistory" value="Antibiotics">
-                                <label class="form-check-label" for="antibiotics">Antibiotics</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="aspirin" name="medicationHistory" value="Aspirin">
-                                <label class="form-check-label" for="aspirin">Aspirin</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="alcohol" name="medicationHistory" value="Alcohol">
-                                <label class="form-check-label" for="alcohol">Alcohol</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="steroids" name="medicationHistory" value="Steroids">
-                                <label class="form-check-label" for="steroids">Steroids</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="vaccinations" name="medicationHistory" value="Vaccinations">
-                                <label class="form-check-label" for="vaccinations">Vaccinations</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="rabiesVaccine" name="medicationHistory" value="Dog bite Rabies vaccine (1 year)">
-                                <label class="form-check-label" for="rabiesVaccine">Dog bite Rabies vaccine (1 year)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="noneMedication" name="medicationHistory" value="None">
-                                <label class="form-check-label" for="noneMedication">None</label>
-                            </div>
-                        </div>
+                    
+<div id="step3" class="form-step" style="display: none;">
+    <!-- Medications -->
+    <div class="form-group">
+        <label for="medicationHistory">Are you taking or have you taken any of these in the past 72 hours?</label>
+        <!-- Add medication checkboxes -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="antibiotics" name="medications[]" value="Antibiotics">
+            <label class="form-check-label" for="antibiotics">Antibiotics</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="aspirin" name="medications[]" value="Aspirin">
+            <label class="form-check-label" for="aspirin">Aspirin</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="alcohol" name="medications[]" value="Alcohol">
+            <label class="form-check-label" for="alcohol">Alcohol</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="steroids" name="medications[]" value="Steroids">
+            <label class="form-check-label" for="steroids">Steroids</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="vaccinations" name="medications[]" value="Vaccinations">
+            <label class="form-check-label" for="vaccinations">Vaccinations</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rabiesVaccine" name="medications[]" value="Dog bite Rabies vaccine (1 year)">
+            <label class="form-check-label" for="rabiesVaccine">Dog bite Rabies vaccine (1 year)</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noneMedication" name="medications[]" value="None">
+            <label class="form-check-label" for="noneMedication">None</label>
+        </div>
+    </div>
 
-                        <!-- Surgery/Transfusion History -->
-                        <div class="form-group">
-                            <label for="surgeryTransfusion">Is there any history of surgery or blood transfusion in the past six months?</label>
-                            <!-- Add surgery/transfusion options -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="majorSurgery" name="surgeryTransfusion" value="Major">
-                                <label class="form-check-label" for="majorSurgery">Major Surgery</label>
-                            </div>
-                            <!-- Add other surgery/transfusion options -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="bloodTransfusion" name="surgeryTransfusion" value="Blood Transfusion">
-                                <label class="form-check-label" for="bloodTransfusion">Blood Transfusion</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="minorSurgery" name="surgeryTransfusion" value="Minor">
-                                <label class="form-check-label" for="minorSurgery">Minor Surgery</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary btn-prev">Previous</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        
-                    </div>
+    <!-- Surgery/Transfusion History -->
+    <div class="form-group">
+        <label for="surgeryTransfusion">Is there any history of surgery or blood transfusion in the past six months?</label>
+        <!-- Add surgery/transfusion options -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="majorSurgery" name="surgeryTransfusion[]" value="Major">
+            <label class="form-check-label" for="majorSurgery">Major Surgery</label>
+        </div>
+        <!-- Add other surgery/transfusion options -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bloodTransfusion" name="surgeryTransfusion[]" value="Blood Transfusion">
+            <label class="form-check-label" for="bloodTransfusion">Blood Transfusion</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="minorSurgery" name="surgeryTransfusion[]" value="Minor">
+            <label class="form-check-label" for="minorSurgery">Minor Surgery</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noneSurgeryTransfusion" name="surgeryTransfusion[]" value="None">
+            <label class="form-check-label" for="noneSurgeryTransfusion">None</label>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-prev">Previous</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
                 </form>
             </div>
         </div>
