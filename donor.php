@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; // Change this if your MySQL server is running on a different host
+$servername = "localhost:3308"; // Change this if your MySQL server is running on a different host
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
@@ -11,7 +11,10 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+if(empty($_SESSION['user_id'])){
+    header('login.html');
+    exit();
+}
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
