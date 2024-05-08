@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Signup Form</title>
+    <title>Signup Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             text-align: center;
             margin: 50px;
+            
+        }
+        .main{
+            display: flex;
+        }
+        .image{
+            background-image: url(blood3.jpg);
         }
         .form-container {
             width: 300px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,26 +32,59 @@
             display: block;
             text-align: left;
             margin-bottom: 5px;
+            font-weight: bold;
         }
         .form-group input, .form-group select {
-            width: 100%;
+            width: calc(100% - 16px);
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 3px;
         }
+        .form-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-position: right 8px center;
+            background-size: 24px;
+        }
+        .form-group textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: vertical;
+        }
         .form-button {
-            background-color: #15464d;
+            background-color: #007bff;
             color: #fff;
             padding: 10px 15px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+        .form-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
+    <div class="main">
 
+   
+<div class="image">
+    <img src="blood3.jpg" alt="" srcset="">
+</div>
 <div class="form-container" id="signupForm">
     <h2>Sign Up</h2>
     <form action="signup.php" method="post" onsubmit="return validateForm()">
@@ -55,7 +94,7 @@
         </div>
         <div class="form-group">
             <label for="contactNumber">Contact Number:</label>
-            <input type="tel" id="contactNumber" name="contactnumber" required>
+            <input type="tel" id="contactNumber" name="contactnumber" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
         </div>
         <div class="form-group">
             <label for="email">Email Address:</label>
@@ -63,11 +102,11 @@
         </div>
         <div class="form-group">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{5,}" title="Username must be alphanumeric and at least 5 characters long" required>
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" pattern=".{6,}" title="Password must be at least 6 characters long" required>
         </div>
         <div class="form-group">
             <label for="dob">Date of Birth:</label>
@@ -100,11 +139,11 @@
                 <option value="O-">O-</option>
             </select>
         </div>
-        <input type="submit" class="form-button" name="sign-up"></input>
+        <input type="submit" class="form-button" name="signup" value="Signup"></input>
     </form>
     <p>Already have an account? <a href="login.html">Login</a></p>
 </div>
-
+</div>
 <script>
     function validateForm() {
         var fullName = document.getElementById('fullName').value;
@@ -121,6 +160,30 @@
             alert('Please fill in all fields.');
             return false;
         }
+
+        // Regular expressions for validation
+        var contactNumberRegex = /^[0-9]{10}$/;
+        var usernameRegex = /^[a-zA-Z0-9]{5,}$/;
+        var passwordRegex = /^.{6,}$/;
+
+        // Validate contact number
+        if (!contactNumberRegex.test(contactNumber)) {
+            alert('Please enter a valid 10-digit phone number.');
+            return false;
+        }
+
+        // Validate username
+        if (!usernameRegex.test(username)) {
+            alert('Username must be alphanumeric and at least 5 characters long.');
+            return false;
+        }
+
+        // Validate password
+        if (!passwordRegex.test(password)) {
+            alert('Password must be at least 6 characters long.');
+            return false;
+        }
+
         return true;
     }
 </script>
