@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
     <link rel="stylesheet" href="admin.css">
-</head>
-<body>
-    <div class="admin-container">
-        <h1>Admin Page</h1>
-        <div class="admin-menu">
-            <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#donors">Manage Donors</a></li>
-                <li><a href="#recipients">Manage Recipients</a></li>
-                <li><a href="#settings">Settings</a></li>
-            </ul>
-        </div>
+
+   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+        <title>Blood Bank Management System</title>
+    </head>
+    <body>
+
+     <div class="main">
+            <style>
+                .navbar-brand {
+                    font-size: 30px; /* Adjust the font size as needed */
+                }
+           
+                .navbar.bg-dark {
+                    background-color: #9b1422 !important;
+                }
+            </style>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="logo" width="50" height="50">
+                    BloodOasis
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Requests</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Donor List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Log Out</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        
         <div class="admin-content">
             <section id="dashboard">
                 <h2>Dashboard</h2>

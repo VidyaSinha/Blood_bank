@@ -4,6 +4,16 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+.navbar-brand {
+    margin-left: 20px;
+   
+    font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+
 
 .container {
     max-width: 800px;
