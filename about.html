@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="nav">
-        <img src="logo.png" alt="logo">
-        <h1>BloodOasis</h1>
-        <h3> Nurturing Life, Ensuring Hope</h3>
-
-        <div class="navtabs"> 
-            <a href="about.html">About Us</a>
-            <a href="Dreg.html">Donate Blood</a>
-            <a href="#">Looking for Blood</a>
-            <a href="signup.html">Sign-in</a>
+    <style>
+        .navbar-brand {
+            font-size: 30px; /* Adjust the font size as needed */
+        }
+   
+        .navbar.bg-dark {
+            background-color: #9b1422 !important;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="logo" width="50" height="50">
+            BloodOasis
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dreg.html">Donate Blood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Looking for Blood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign-in</a>
+                </li>
+               
+            </ul>
         </div>
-    </div>
-<div class="firsttitle">
+    </nav>
+<div class="main">
+
+      <div class="firsttitle">
     <h1>About Our Blood Bank Management System</h1>
-</div>
+      </div>
     <div class="first">
       
-<h3>Welcome to BloodOasis, where we are dedicated to ensuring a seamless and efficient process for managing and distributing life-saving blood. Our Blood Bank Management System plays a crucial role in maintaining a robust supply chain, 
+        <h3>Welcome to BloodOasis, where we are dedicated to ensuring a seamless and efficient process for managing and distributing life-saving blood. Our Blood Bank Management System plays a crucial role in maintaining a robust supply chain, 
     enabling us to meet the urgent and diverse needs of patients.</h3>
     </div>
     <div class="second">
@@ -68,12 +95,12 @@ We understand the importance of privacy and confidentiality. Our system ensures 
     
         <ul>
             <li>
-                <h4>1. Who can donate blood?</h4>
+                <h4>3. Who can donate blood?</h4>
                 <p>Most healthy adults can donate blood. However, eligibility criteria may vary. Common requirements include being in good health, meeting age requirements, and not having certain medical conditions.</p>
             </li>
     
             <li>
-                <h4>2. How often can I donate blood?</h4>
+                <h4>4. How often can I donate blood?</h4>
                 <p>The frequency of blood donation depends on local regulations and your health. In many places, you can donate whole blood every 8 weeks.</p>
             </li>
     
@@ -85,12 +112,12 @@ We understand the importance of privacy and confidentiality. Our system ensures 
     
         <ul>
             <li>
-                <h4>1. Who receives donated blood?</h4>
+                <h4>5. Who receives donated blood?</h4>
                 <p>Donated blood is used for various medical purposes, including surgeries, trauma care, cancer treatment, and supporting patients with certain medical conditions. Recipients include individuals in need of blood transfusions.</p>
             </li>
     
             <li>
-                <h4>2. How is blood matched to recipients?</h4>
+                <h4>6. How is blood matched to recipients?</h4>
                 <p>Blood types must be matched between donors and recipients to prevent adverse reactions. Blood banks carefully test and match blood before transfusions to ensure compatibility.</p>
             </li>
     
@@ -99,6 +126,7 @@ We understand the importance of privacy and confidentiality. Our system ensures 
         </ul>
     
     </div>
-    
+        
+</div>
 </body>
 </html>

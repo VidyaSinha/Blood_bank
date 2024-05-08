@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet');
 
 
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -21,99 +22,19 @@ body {
 
 html{
     scroll-behavior: smooth;
+    width: 100%;
 }
 .main{
     position:relative
 }
-.nav {
-    background-color: #9b1422;
-    color: #ffffff;
-    text-align:left;
-    width: 100%;
-    padding: 1%;
-    display: flex;
-    /* position: relative; */
-    height: 10vh;
-    /* justify-content: space-between; */
-    align-items: center;
-}
-/* .nav {
-    display: inline-block;
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    padding-right:80px;
-    /* margin-left: 150px; */
-    /* margin-right: 200px; */
 
 
-
-
-.nav img{
-    height: 50px;
-    width: 50px;
-border-radius: 50%;
-padding:20px;
-}
-.nav h1{
-    /* margin-left: 20px; */
-     /* font-size: xx-large; */
-    font-family: "El Messiri", sans-serif;
-    /* margin-right: 200px; */
-    /* background-color: #411f05; */
-    
-    /* justify-content: flex-start; */
-    text-align: left;
-
-
-}
-.navbar i{
-    display:none;
-    font-weight: 800;
-    font-size: 1.2vw;
-}
-
-
-.navtabs a {
-    position: sticky;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 30px;
-    padding-left: 10px;
-    
-}
-
-.navtabs a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navtabs a:hover::after{
-    transform: scaleX(1);
-    transform-origin: left;
-
-
-}
-.navtabs{
-    /* background-color: #343a40; */
-    margin-left: 40%;
-}
 section {
     padding: 30px;
 }
 
 .features {
-    /* background-color: #F1ECD6; */
+   
     height: 220px;
     overflow: hidden;
     position: relative;
@@ -166,9 +87,16 @@ section {
     transform: translateX(-100%);
 }
 
-/* #slide3:checked ~ .slides {
-    transform: translateX(-200%);
-} */
+/* Add this CSS to your stylesheet or within a <style> tag in your HTML */
+.navbar-brand {
+    margin-left: 20px;
+   
+    font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
+}
 
 
 @keyframes runText {
@@ -186,7 +114,8 @@ section {
     align-items: center;
     justify-content: center;
     display: flex;
-
+    overflow: hidden;
+    width: 100%;
    
 }
 .run h2 {
@@ -194,7 +123,7 @@ section {
    
    font-family: "Kanit", sans-serif;
   /* font-weight: 100; */
-    width: fit-content;
+    /* width: fit-content; */
     font-size:large;
     align-items: center;
     justify-content: center;
@@ -249,7 +178,7 @@ section {
     color: #680b15;
     font-weight: bold;
     padding: 20px;
-
+font-size: small;
     /* text-align: center; */
     font-family: "Volkhov", serif;
     justify-content: center;
@@ -394,7 +323,7 @@ section {
 }
 
 .vdo video{
- height: 600px;
+ /* height: 600px; */
  padding: 50px;
  /* align-items: center; */
  
@@ -564,7 +493,7 @@ footer a{
     padding: 10px 20px;
     text-decoration: none;
     background-color: #bc1b2b;
-    color: #fff;
+    color: #efd6d6;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -574,11 +503,11 @@ footer a{
     background-color: #3c0b10;
     box-shadow: 0 0 10px rgba(244, 237, 237, 0.3);
 }
-
-@media (max-width:400px) {
-    body{
-        overflow-x: hidden;
-    }
+.abcd{
+    height: 30px;
+}
+@media (max-width:500px) {
+   
     
     .nav {
         background-color: #9b1422;
@@ -587,8 +516,7 @@ footer a{
         padding: 10px;
         display: flex;
         height: 50px;
-        width:380px;
-        /* justify-content: space-between; */
+        width:380px; 
         align-items: center;
     }
 
@@ -614,23 +542,42 @@ footer a{
     
       }
     
-    
+  
     .navtabs a {
-    display: block;
+    display:none;
+    }
+    .navtabs i{
+        font-size:4vw;
+        display:block;
+        background-color: #0c0808;
+        /* margin-right: 500px; */
+     
     }
     .data{
     flex-direction: column;
     }
+
+    .abcd{
+        height: 180px;
+    }
     .red-box1,
-.red-box2,
-.red-box3 {
-    height: 350px;
-    width: 300px;
+    .red-box2,
+    .red-box3 {
+        margin-top: 50px;
+        height: 300px;
+        width: 250px;
+        display: block;
+        
+    }
+    
+
+.btn {
+  height: auto;
 }
 .red-box1 li ,
 .red-box2 li ,
 .red-box3 li {
-   font-size: small;
+   font-size: x-small;
    padding: 0%;
 }
 .red-box1 h2 ,
@@ -676,20 +623,85 @@ width: 400px;
    
 }
 .run h2 {
-   /* padding: 15px; */
-   
-   font-family: "Kanit", sans-serif;
-  /* font-weight: 100; */
-    width: fit-content;
-    font-size:medium;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+ 
     font-weight: 50px;
-    color: rgb(241, 235, 235);
-    /* overflow: hidden; */
-    white-space: nowrap;
-    animation: runText 20s linear infinite; /* Adjust the duration as needed */
+   
+}
+.donationbox {
+    position: absolute;
+    width: 70px;
+    height: 100px;
+    border-radius: 4%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f59b9b;
+    overflow: hidden; /* Hide overflowing pseudo-element */
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.donationbox:hover {
+    background-color: #d95757; /* Change background color on hover */
+}
+
+.donationbox::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #964444; /* Set the initial color same as hover color */
+    border-radius: 4%;
+    transition: height 0.8s ease; /* Add transition for smooth height change */
+}
+
+.donationbox:hover::before {
+    height: 100%;
+    /* color: #fefafa; */
+}
+.donationbox::after {
+    content: '2345254''       Donations'; /* Combine both pieces of content */
+    position: relative;
+    bottom: 0;
+    font-size: small;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ffffff; /* Set the initial color same as hover color */
+    border-radius: 4%;
+    color: #ffffff;
+    font-family: "Volkhov", serif;/* Replace 'Your Custom Font' with your desired font */
+    text-align: center; /* Center-align the text */
+    line-height: 9; /* Adjust line height as needed */
+    transition: height 0.8s ease; /* Add transition for smooth height change */
+    overflow: hidden; /* Hide overflowing text */
+}
+
+.donationbox:hover::after {
+    height: 100%;
+    background-color: #85202b; /* Change background color on hover */
 }
 
 }
+
+/* Sticky navbar */
+.navbar.sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.vdo video{
+    height: 200px;
+    padding: 5px;
+    /* align-items: center; */
+    
+    
+   /* margin-left:400px ; */
+   }
+   
+   .vdo{
+    display: flex;
+   }

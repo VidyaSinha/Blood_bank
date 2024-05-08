@@ -1,12 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
+// Database connection parameters
+$servername = "localhost:3308";
+$username = "root"; // Change this to your MySQL username
+$password = ""; // Change this to your MySQL password (if any)
+$database = "bloodbank";
 
-$conn = mysqli_connect($servername, $username, $password);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 $sql = "CREATE DATABASE IF NOT EXISTS bloodbank";
@@ -19,56 +23,74 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_select_db($conn, "bloodbank");
 
+// SQL statements to create tables
+$sql_users = "CREATE TABLE users (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  full_name VARCHAR(255) NOT NULL,
+  contact_number VARCHAR(15) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  dob DATE NOT NULL,
+  address TEXT NOT NULL,
+  gender ENUM('Male', 'Female', 'Other') NOT NULL,
+  blood_group ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-') NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY username_unique (username),
+  UNIQUE KEY email_unique (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
 
-$sql = "CREATE TABLE IF NOT EXISTS donors (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    age INT(3),
-    gender ENUM('Male', 'Female', 'Other'),
-    bloodgroup ENUM('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'),
-    father_name VARCHAR(255),
-    mobile_no VARCHAR(15),
-    email VARCHAR(255),
-    state VARCHAR(255),
-    district VARCHAR(255),
-    address VARCHAR(255),
-    pincode VARCHAR(10)
-)";
-if ($conn->query($sql) === TRUE) {
-    echo "Table donors created successfully";
+$sql_donor = "CREATE TABLE donor (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  blood_type VARCHAR(5) NOT NULL,
+  weight DECIMAL(5,2) NOT NULL,
+  first_time_donor ENUM('Yes','No') NOT NULL,
+  last_donation_date DATE,
+  surgery_transfusion_history TEXT,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
+
+$sql_medical_history = "CREATE TABLE medical_history (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  donor_id INT(11) NOT NULL,
+  medical_condition VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (donor_id) REFERENCES donor (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
+
+$sql_surgery_transfusion_history = "CREATE TABLE surgery_transfusion_history (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  donor_id INT(11) NOT NULL,
+  history TEXT NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (donor_id) REFERENCES donor (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
+
+// Execute SQL statements
+if ($conn->query($sql_users) === TRUE) {
+    echo "Table users created successfully<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table users: " . $conn->error;
 }
 
-$sql="CREATE TABLE IF NOT EXISTS donation_data (
-    donation_id INT AUTO_INCREMENT PRIMARY KEY,
-    donor_type VARCHAR(255),
-    donation_type VARCHAR(255),
-    component_type VARCHAR(255),
-    bag_size VARCHAR(255),
-    donor_id INT(6) UNSIGNED,
-    FOREIGN KEY (donor_id) REFERENCES donors(id)
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table donation_data created successfully";
+if ($conn->query($sql_donor) === TRUE) {
+    echo "Table donor created successfully<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table donor: " . $conn->error;
 }
 
-$sql="CREATE TABLE IF NOT EXISTS user (
-    user_id INT(6) AUTO_INCREMENT PRIMARY KEY,
-    fullname VARCHAR(255),
-    mobile_no VARCHAR(15),
-    email VARCHAR(255),
-    username VARCHAR(255),
-    password VARCHAR(255)
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table user created successfully";
+if ($conn->query($sql_medical_history) === TRUE) {
+    echo "Table medical_history created successfully<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table medical_history: " . $conn->error;
 }
 
+if ($conn->query($sql_surgery_transfusion_history) === TRUE) {
+    echo "Table surgery_transfusion_history created successfully<br>";
+} else {
+    echo "Error creating table surgery_transfusion_history: " . $conn->error;
+}
+
+// Close connection
 $conn->close();
+?>

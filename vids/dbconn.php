@@ -1,7 +1,7 @@
 <?php
-$user = 'root';
-$pass = '';
-$db = 'bloodbank';
-$host = 'localhost:3308';
+$username = 'root';
+$password = '';
+$database = 'bloodbank';
+$servername= 'localhost:3308';
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($servername, $username, $password, $database);
