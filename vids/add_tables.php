@@ -1,10 +1,6 @@
 <?php
 // Database connection parameters
-<<<<<<< HEAD
-$servername = "localhost:3308";
-=======
-$servername = "localhost";
->>>>>>> 3c3a75cf4c8c4c77535d01419c3ca217726ba1b7
+$servername = "localhost"; // Change this to your MySQL server name
 $username = "root"; // Change this to your MySQL username
 $password = ""; // Change this to your MySQL password (if any)
 $database = "bloodbank";
@@ -17,18 +13,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "CREATE DATABASE IF NOT EXISTS bloodbank";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Database created successfully";
+// Create database
+$sql_create_db = "CREATE DATABASE IF NOT EXISTS $database";
+if ($conn->query($sql_create_db) === TRUE) {
+    echo "Database created successfully<br>";
 } else {
-    echo "Error creating database: " . mysqli_error($conn);
+    echo "Error creating database: " . $conn->error;
 }
 
-mysqli_select_db($conn, "bloodbank");
+// Select database
+mysqli_select_db($conn, $database);
 
 // SQL statements to create tables
-$sql_users = "CREATE TABLE users (
+$sql_users = "CREATE TABLE IF NOT EXISTS users (
   id INT(11) NOT NULL AUTO_INCREMENT,
   full_name VARCHAR(255) NOT NULL,
   contact_number VARCHAR(15) NOT NULL,
@@ -44,7 +41,7 @@ $sql_users = "CREATE TABLE users (
   UNIQUE KEY email_unique (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
 
-$sql_donor = "CREATE TABLE donor (
+$sql_donor = "CREATE TABLE IF NOT EXISTS donor (
   id INT(11) NOT NULL AUTO_INCREMENT,
   blood_type VARCHAR(5) NOT NULL,
   weight DECIMAL(5,2) NOT NULL,
@@ -54,7 +51,7 @@ $sql_donor = "CREATE TABLE donor (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
 
-$sql_medical_history = "CREATE TABLE medical_history (
+$sql_medical_history = "CREATE TABLE IF NOT EXISTS medical_history (
   id INT(11) NOT NULL AUTO_INCREMENT,
   donor_id INT(11) NOT NULL,
   medical_condition VARCHAR(255) NOT NULL,
@@ -62,7 +59,7 @@ $sql_medical_history = "CREATE TABLE medical_history (
   FOREIGN KEY (donor_id) REFERENCES donor (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
 
-$sql_surgery_transfusion_history = "CREATE TABLE surgery_transfusion_history (
+$sql_surgery_transfusion_history = "CREATE TABLE IF NOT EXISTS surgery_transfusion_history (
   id INT(11) NOT NULL AUTO_INCREMENT,
   donor_id INT(11) NOT NULL,
   history TEXT NOT NULL,

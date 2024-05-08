@@ -5,7 +5,7 @@ $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
 
 // Create connection
-$conn = new mysqli($servername . ':' . $port, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
@@ -20,38 +20,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bloodUnits = $_POST["bloodUnits"];
     $firstTimeDonor = $_POST["firstTimeDonor"];
     $lastDonationDate = isset($_POST["lastDonationDate"]) ? $_POST["lastDonationDate"] : "";
-    $diseases = isset($_POST["diseases"]) ? $_POST["diseases"] : [];
-    $medicationHistory = isset($_POST["medicationHistory"]) ? $_POST["medicationHistory"] : "";
-    $surgeryTransfusion = isset($_POST["surgeryTransfusion"]) ? $_POST["surgeryTransfusion"] : "";
+    $diseases = isset($_POST["diseases"]) ? implode(", ", $_POST["diseases"]) : "";
+    $surgeryTransfusion = isset($_POST["surgeryTransfusion"]) ? implode(", ", $_POST["surgeryTransfusion"]) : "";
 
-    // Process the data further, you can save it to a database or perform any other actions
+    // Prepare SQL statement
+    $sql = "INSERT INTO donor (blood_type, weight, first_time_donor, last_donation_date, surgery_transfusion_history) VALUES (?, ?, ?, ?, ?)";
 
-    // For demonstration purposes, let's just print the received data
-    echo "<h2>Submitted Data:</h2>";
-    echo "<p>Blood Type: $bloodType</p>";
-    echo "<p>Weight: $weight kg</p>";
-    echo "<p>Number of Blood Units: $bloodUnits</p>";
-    echo "<p>First Time Donor: $firstTimeDonor</p>";
-    if ($firstTimeDonor == "No" && !empty($lastDonationDate)) {
-        echo "<p>Last Donation Date: $lastDonationDate</p>";
+    // Prepare and bind parameters
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssss", $bloodType, $weight, $firstTimeDonor, $lastDonationDate, $surgeryTransfusion);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        echo "Your blood donation information has been successfully recorded.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    if (!empty($diseases)) {
-        echo "<p>Medical History:</p>";
-        echo "<ul>";
-        foreach ($diseases as $disease) {
-            echo "<li>$disease</li>";
-        }
-        echo "</ul>";
-    }
-    if (!empty($medicationHistory)) {
-        echo "<p>Medication History: $medicationHistory</p>";
-    }
-    if (!empty($surgeryTransfusion)) {
-        echo "<p>Surgery/Transfusion History: $surgeryTransfusion</p>";
-    }
+
+    // Close statement
+    $stmt->close();
 } else {
     // If the form is not submitted, redirect to the form page
     header("Location: index.html");
     exit;
 }
+
+// Close connection
+$conn->close();
 ?>
