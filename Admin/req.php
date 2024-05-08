@@ -55,7 +55,7 @@
         }
 
         // Fetch blood requests from the database and display them
-        $sql = "SELECT * FROM blood_request";
+        $sql = "SELECT * FROM blood_requests";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

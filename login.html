@@ -10,7 +10,7 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> -->
+    <form action="login.php" method="post">
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -24,10 +24,8 @@
     <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
 </div>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Your authentication code goes here
 
+<<<<<<< HEAD
     if (/* Password is authenticated */) {
         // Redirect to the user account page
         header("Location: user.html");
@@ -37,6 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+=======
+>>>>>>> 815c2bcd6f74bfa9287e2dedc5cf63eef8b84df3
 
 </body>
 </html>
