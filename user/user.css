@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #9b1422;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-user {
+    font-size: 18px;
+}
+
