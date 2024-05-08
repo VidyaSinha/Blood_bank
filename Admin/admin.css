@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,36 +22,50 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
 
-.blood-type-section {
-    background-color: #fff;
+.navbar {
+    background-color: #9b1422 !important;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #f8f9fa !important;
+}
+
+.main {
+    padding-top: 20px;
+}
+
+.blood-groups {
+    background-color: #e8c9c9;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 10px ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.donors,
-.recipients {
-    margin-top: 20px;
-}
-
-.person {
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 10px;
+.blood-group {
+    border: 3px solid #7d2a10;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-h1, h2 {
-    color: #333;
+.blood-group h3 {
+    color: #9b1422;
 }
 
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 20px;
+.blood-group .units {
+    font-weight: bold;
 }
