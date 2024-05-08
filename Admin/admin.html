@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank Management System - Dashboard</title>
+    <title>Donor List</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -32,10 +32,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Dashboard</a>
+                    <a class="nav-link active" href="admin.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="requests.html">Requests</a>
+                    <a class="nav-link" href="req.html">Requests</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="donorlist.html">Donor List</a>
@@ -46,10 +46,9 @@
             </ul>
         </div>
     </nav>
-
     <div class="container">
         <H1>DASHBOARD</H1>
-        <div class="blood-groups" >
+        <div class="blood-groups">
             <h2>Blood Units Available</h2>
             <div class="row">
                 <div class="col-sm">
@@ -92,21 +91,20 @@
                 </div>
                 <div class="col-sm">
                     <div class="blood-group">
-                        <h3>Blood Group O</h3>
+                        <h3>Blood Group &nbsp; &nbsp; O</h3>
                         <p class="units">Units: <span id="bloodO">0</span></p>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="blood-group">
-                        <h3>Blood Group O-</h3>
+                        <h3>Blood Group  O-</h3>
                         <p class="units">Units: <span id="bloodONeg">0</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+    
 <script src="dashboard.js"></script>
 
 </body>
