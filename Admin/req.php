@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor List</title>
+    <title>Admin Blood Requests</title>
     <link rel="stylesheet" href="req.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -53,17 +53,17 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
+// Fetch blood requests from the database and display them
+$sql = "SELECT blood_requests.*, users.full_name, users.id AS user_id FROM blood_requests JOIN users ON blood_requests.user_id = users.id";
+$result = $conn->query($sql);
 
-        // Fetch blood requests from the database and display them
-        $sql = "SELECT * FROM blood_requests";
-        $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<li>" . $row["blood_type"];
+                echo "<li>User ID: " . $row["user_id"] . ", Name: " . $row["full_name"] . ", Blood Type: " . $row["blood_type"];
                 echo "<div class='action-buttons'>";
-                echo "<button class='accept-button' onclick='acceptRequest(" . $row["id"] . ")'>Accept</button>";
-                echo "<button class='reject-button' onclick='rejectRequest(" . $row["id"] . ")'>Reject</button>";
+                echo "<button class='accept-button' onclick='acceptRequest(" . $row["request_id"] . ")'>Accept</button>";
+                echo "<button class='reject-button' onclick='rejectRequest(" . $row["request_id"] . ")'>Reject</button>";
                 echo "</div></li>";
             }
         } else {
@@ -78,12 +78,28 @@
 <script>
     function acceptRequest(requestId) {
         // Send an AJAX request to accept the request
-        alert("Request with ID " + requestId + " accepted!");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Request with ID " + requestId + " accepted!");
+                location.reload(); // Refresh the page after accepting the request
+            }
+        };
+        xhr.open("GET", "accept_request.php?request_id=" + requestId, true);
+        xhr.send();
     }
 
     function rejectRequest(requestId) {
         // Send an AJAX request to reject the request
-        alert("Request with ID " + requestId + " rejected!");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Request with ID " + requestId + " rejected!");
+                location.reload(); // Refresh the page after rejecting the request
+            }
+        };
+        xhr.open("GET", "reject_request.php?request_id=" + requestId, true);
+        xhr.send();
     }
 </script>
 </html>

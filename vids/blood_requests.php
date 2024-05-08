@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "All fields are required.";
     } else {
         // Prepare SQL statement
-        $sql = "INSERT INTO users (name, gender, blood_type, units, age, address, contact_number, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO blood_requests (name, gender, blood_type, units, age, address, contact_number, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         // Prepare and bind parameters
         $stmt = $conn->prepare($sql);
