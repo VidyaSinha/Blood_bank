@@ -1,6 +1,10 @@
 <?php
 // Database connection parameters
+<<<<<<< HEAD
 $servername = "localhost:3308";
+=======
+$servername = "localhost";
+>>>>>>> 3c3a75cf4c8c4c77535d01419c3ca217726ba1b7
 $username = "root"; // Change this to your MySQL username
 $password = ""; // Change this to your MySQL password (if any)
 $database = "bloodbank";

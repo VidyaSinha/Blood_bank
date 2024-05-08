@@ -1,5 +1,17 @@
 <?php
-require_once 'dbconn.php';
+$servername = "localhost"; // Change this if your MySQL server is running on a different host
+$username = "root"; // Your MySQL username
+$password = ""; // Your MySQL password
+$database = "bloodbank"; // Your MySQL database name
+$port = 3306; // Default MySQL port
+
+// Create connection
+$conn = new mysqli($servername . ':' . $port, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -14,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST['gender'];
     $bloodGroup = $_POST['bloodGroup'];
     
-    $sql_check = "SELECT * FROM user WHERE username = ? OR email = ?";
+    $sql_check = "SELECT * FROM users WHERE username = ? OR email = ?";
     $stmt_check = mysqli_prepare($conn, $sql_check);
     mysqli_stmt_bind_param($stmt_check, "ss", $username, $email);
     mysqli_stmt_execute($stmt_check);
@@ -23,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result_check) > 0) {
         echo "User with this username or email already exists.";
     } else {
-        $sql_insert = "INSERT INTO user (fullname, mobile_no, email, username, password, dob, address, gender, blood_group) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql_insert = "INSERT INTO users (full_name, contact_number, email, username, password, dob, address, gender, blood_group) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt_insert = mysqli_prepare($conn, $sql_insert);
         
         mysqli_stmt_bind_param($stmt_insert, "sssssssss", $fullname, $mobile_no, $email, $username, $hashed_password, $dob, $address, $gender, $bloodGroup);
