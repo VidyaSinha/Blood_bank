@@ -8,7 +8,6 @@
     border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
 }
 
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -33,4 +32,31 @@ body {
 
 .navbar-nav .nav-link.active {
     color: #f8f9fa !important;
+}
+
+.navbar-brand {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+.navbar.bg-dark {
+    background-color: #9b1422 !important;
+}
+.action-buttons {
+    margin-top: 10px;
+}
+.accept-button, .reject-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.accept-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+.reject-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
 }
