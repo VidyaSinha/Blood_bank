@@ -73,7 +73,7 @@ $conn->close();
                     <a class="nav-link" href="donor.html">Donate</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Log Out</a>
+                    <a class="nav-link" href="logout.php">Log Out</a>
                 </li>
             </ul>
         </div>

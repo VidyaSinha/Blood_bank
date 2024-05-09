@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Add event listener for adding a new blood request
         document.getElementById("addRequestBtn").addEventListener("click", function() {
-            window.location.href = "/vids/LFB.html";
+            window.location.href = "LFB.html";
         });
 
         // Populate blood request table
