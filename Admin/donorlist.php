@@ -71,10 +71,10 @@ $result = $stmt->get_result();
                     <a class="nav-link active" href="admin.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="req.html">Requests</a>
+                    <a class="nav-link" href="req.php">Requests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="donorlist.html">Donor List</a>
+                    <a class="nav-link" href="donorlist.php">Donor List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Log Out</a>
