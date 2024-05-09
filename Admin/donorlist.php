@@ -5,7 +5,7 @@ $servername = "localhost"; // Change this if your MySQL server is running on a d
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
-$port = 3306; // Default MySQL port
+$port = 3308; // Default MySQL port
 
 // Create connection
 $conn = new mysqli($servername . ':' . $port, $username, $password, $database);
@@ -26,9 +26,9 @@ if (!isset($_SESSION['username'])) {
 $admin_id = $_SESSION['user_id'];
 
 // Fetch the list of donors associated with the admin
-$sql = "SELECT * FROM users WHERE admin_id = ?";
+$sql = "SELECT * FROM users ";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $admin_id);
+
 $stmt->execute();
 $result = $stmt->get_result();
 
