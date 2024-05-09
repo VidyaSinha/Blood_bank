@@ -104,13 +104,13 @@ $conn->close();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="admin.html">Dashboard</a>
+                    <a class="nav-link active" href="admin.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="req.html">Requests</a>
+                    <a class="nav-link" href="req.php">Requests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="donorlist.html">Donor List</a>
+                    <a class="nav-link" href="donorlist.php">Donor List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Log Out</a>

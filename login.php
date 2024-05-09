@@ -5,7 +5,7 @@ $servername = "localhost"; // Change this if your MySQL server is running on a d
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
-$port = 3306; // Default MySQL port
+$port = 3308; // Default MySQL port
 
 // Create connection
 $conn = new mysqli($servername . ':' . $port, $username, $password, $database);
@@ -19,6 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     
+    if ($username === "admin" && $password === "123") {
+        // Redirect to admin.html
+        header("Location: admin/admin.php");
+        exit();
+    }
+    
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $username);
@@ -31,8 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Password is correct, set session variables
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['contact_number'] = $row['contact_number'];
+            $_SESSION['blood_group'] = $row['blood_group'];
+
             // Redirect to user.html
-            header("Location: user/user.html");
+            header("Location: user/user.php");
             exit();
         } else {
             echo "Invalid username or password.";

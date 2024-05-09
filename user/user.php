@@ -1,3 +1,33 @@
+<?php
+// Establish database connection
+$servername = "localhost:3308";
+$username = "root";
+$password = "";
+$database = "bloodbank"; // Replace 'your_database_name' with your actual database name
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Count the number of requests with different statuses
+$sqlAccepted = "SELECT COUNT(*) AS acceptedCount FROM blood_requests WHERE status = 'accepted'";
+$sqlRejected = "SELECT COUNT(*) AS rejectedCount FROM  blood_requests WHERE status = 'rejected'";
+$sqlTotal = "SELECT COUNT(*) AS totalCount FROM blood_requests";
+
+$resultAccepted = $conn->query($sqlAccepted);
+$resultRejected = $conn->query($sqlRejected);
+$resultTotal = $conn->query($sqlTotal);
+
+$acceptedCount = $resultAccepted->fetch_assoc()['acceptedCount'];
+$rejectedCount = $resultRejected->fetch_assoc()['rejectedCount'];
+$totalCount = $resultTotal->fetch_assoc()['totalCount'];
+
+// Close connection
+$conn->close();
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +54,7 @@
             <img src="logo.png" alt="logo" width="50" height="50">
             BloodOasis
         </a>
-        <span class="navbar-user">Hello, <span id="loggedInUser"></span></span>
+        <span class="navbar-user">Hello, Vidya <span id="loggedInUser"></span></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +64,13 @@
             <ul class="navbar-nav ml-auto">
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="/about.html">About us</a>
+                    <a class="nav-link" href="about.html">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="vids/LFB.html">Looking for blood</a>
+                    <a class="nav-link" href="LFB.html">Looking for blood</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="vids/donor.html">Donate</a>
+                    <a class="nav-link" href="donor.html">Donate</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Log Out</a>
@@ -49,14 +79,17 @@
         </div>
     </nav>
 
-  
     <body>
         <span id="greetingMessage"></span>
-    <div id="requestStats"></div>
+    <div id="requestStats">
+        <p>Accepted Requests: <?php echo $acceptedCount; ?></p>
+        <p>Rejected Requests: <?php echo $rejectedCount; ?></p>
+        <p>Total Requests: <?php echo $totalCount; ?></p>
+    </div>
     <button id="addRequestBtn">Add Blood Request</button>
     <div id="bloodRequests"></div>
     <div id="donationDetails"></div>
-    <script src="user.js"></script>
+    <!-- <script src="user.js"></script> -->
 
  
 </body>
