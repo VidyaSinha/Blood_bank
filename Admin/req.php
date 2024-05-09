@@ -73,7 +73,7 @@
             <tbody>
                 <?php
                 // Establish database connection
-                $servername = "localhost:3308";
+                $servername = "localhost";
                 $username = "root";
                 $password = "";
                 $database = "bloodbank";

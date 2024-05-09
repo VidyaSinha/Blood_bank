@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:3308"; // Change this if your MySQL server is running on a different host
+$servername = "localhost"; // Change this if your MySQL server is running on a different host
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password
 $database = "bloodbank"; // Your MySQL database name
