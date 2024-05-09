@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 if(empty($_SESSION['user_id'])){
-    header("Location: .html");
+    header("Location: login.html");
     exit();
 }
 // Check if the form is submitted

@@ -54,7 +54,7 @@ $conn->close();
             <img src="logo.png" alt="logo" width="50" height="50">
             BloodOasis
         </a>
-        <span class="navbar-user">Hello, Vidya <span id="loggedInUser"></span></span>
+        <span class="navbar-user">Hello, User <span id="loggedInUser"></span></span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

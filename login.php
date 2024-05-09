@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['blood_group'] = $row['blood_group'];
 
             // Redirect to user.html
-            header("Location: user/user.php");
+            header("Location: user.php");
             exit();
         } else {
             echo "Invalid username or password.";
