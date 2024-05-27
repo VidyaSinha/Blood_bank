@@ -86,7 +86,7 @@ $conn->close();
         <p>Rejected Requests: <?php echo $rejectedCount; ?></p>
         <p>Total Requests: <?php echo $totalCount; ?></p>
     </div>
-    <button id="addRequestBtn">Add Blood Request</button>
+    <button id="addRequestBtn" >Add Blood Request</button>
     <div id="bloodRequests"></div>
     <div id="donationDetails"></div>
     <!-- <script src="user.js"></script> -->

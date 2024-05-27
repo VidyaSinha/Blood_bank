@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($username === "admin" && $password === "123") {
         // Redirect to admin.html
-        header("Location: admin/admin.php");
+        header("Location: admin.php");
         exit();
     }
     
