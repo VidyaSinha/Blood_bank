@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+
+.navbar-brand {
+    margin-left: 20px;
+   
+    font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #9b1422 !important;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #f8f9fa !important;
+}

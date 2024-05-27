@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Blood Bank Management System</title>
+</head>
+<body>
+ <div class="main">
+        <style>
+            .navbar-brand {
+                font-size: 30px; /* Adjust the font size as needed */
+            }
+       
+            .navbar.bg-dark {
+                background-color: #9b1422 !important;
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="logo" width="50" height="50">
+                BloodOasis
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donor.html">Donate Blood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LFB.html">Looking for Blood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign-in</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+        
+    <div class="abcd" >
+
+    </div>
+        
+    <div class="features">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+    
+        <div class="slides">
+            <div class="slide" id="slide1">
+                <img src="./blood1.png" alt="Image 1">
+                <a class="donate-up"></a>
+            </div>
+            <div class="slide" id="slide2">
+                <img src="./d.png" alt="Image 2">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    
+        <div class="arrows">
+            <label for="slide1" class="arrow left-arrow">&lt;</label>
+            <label for="slide2" class="arrow right-arrow">&gt;</label>
+        </div>
+    </div>
+    
+<div class="run">
+    <h2>Empowering healthcare with precision and speed, our BloodOasis seamlessly orchestrates donor records and inventory ensuring every drop of life-saving blood finds its way to those in need.</h2>
+
+</div>
+    <div class="data">
+        <!-- <h2>Know about blood donation</h2> -->
+        <div class="red-box1">
+            <h2>WHO NEEDS MY BLOOD ?</h2>
+            <li>Individuals with certain blood disorders or diseases, such as sickle cell anemia, may need periodic transfusions to alleviate symptoms and improve overall health.</li> 
+
+            <li>Women experiencing complications during childbirth, such as postpartum hemorrhage, may need 2-3 units of blood to address excessive bleeding.</li>
+
+            <li>Patients undergoing specific medical treatments, such as chemotherapy or radiation therapy for cancer, may require blood transfusions to manage the side effects and complications associated with these treatments.</li>
+        </div>
+        <div class="red-box2">
+            <h2>CAN I DONATE BLOOD ? </h2>
+            <li>Donors typically need to be 16-70 years old, with variations based on local regulations and blood donation centers.</li>
+
+            <li>Donors must be in good health, free from acute illnesses, recent surgeries, or medical conditions that affect donation safety.</li>
+
+            <li>Donors should meet a minimum weight of 49kg, ensuring sufficient blood volume, and maintain healthy hemoglobin levels for eligibility.</li>
+            <a href="vids/d.html" class="btn">Donate</a>
+            
+        </div>
+        <div class="red-box3">
+            <h2>HOW DONATIONS WORK ?</h2>
+        <li>Blood donations involve voluntary contributions of blood from individuals who willingly donate to help others in need.</li>
+        <li>Blood donations are collected and managed by specialized organizations and blood banks. These entities ensure a safe and adequate blood supply for medical treatments and emergencies.</li>
+        <li>Blood donations are needed regularly to maintain a sufficient and diverse blood supply. Donors are encouraged to contribute regularly to meet ongoing medical demands and emergencies.</li>
+        </div>
+    </div>
+
+    <div class="donate">
+        <h1>DONATIONS TILL NOW </h1>
+        <div class="donationbox">
+            <h2>234567</h2> 
+            <p>Donations</p>
+        </div>
+    </div>
+
+    <div class="vdo">
+     
+
+        <table>
+        
+           <tr>
+             <th>Donor Blood Group</th>
+             <th>Can Donate To</th>
+             <th>Can Receive From</th>
+           </tr>
+           <tr>
+             <td>A+</td>
+             <td>A+, AB+</td>
+             <td>A+, A-, O+, O-</td>
+           </tr>
+           <tr>
+             <td>A-</td>
+             <td>A+, A-, AB+, AB-</td>
+             <td>A-, O-</td>
+           </tr>
+           <tr>
+             <td>B+</td>
+             <td>B+, AB+</td>
+             <td>B+, B-, O+, O-</td>
+           </tr>
+           <tr>
+             <td>B-</td>
+             <td>B+, B-, AB+, AB-</td>
+             <td>B-, O-</td>
+           </tr>
+           <tr>
+             <td>AB+</td>
+             <td>AB+</td>
+             <td>Everyone</td>
+           </tr>
+           <tr>
+             <td>AB-</td>
+             <td>AB+, AB-</td>
+             <td>A-, B-, O-, AB-</td>
+           </tr>
+           <tr>
+             <td>O+</td>
+             <td>O+, A+, B+, AB+</td>
+             <td>O+, O-</td>
+           </tr>
+           <tr>
+             <td>O-</td>
+             <td>Everyone</td>
+             <td>O-</td>
+           </tr>
+         </table>
+    </div>
+
+    <div class="thala">
+        <h1>Thalassemia Awareness</h1>
+        <!-- <p>Understanding major and minor thalassemia</p> -->
+    </div>
+   
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Major Thalassemia</td>
+                <td>Severe form of thalassemia that requires regular blood transfusions.</td>
+            </tr>
+            <tr>
+                <td>Minor Thalassemia</td>
+                <td>Milder form of thalassemia, often carriers with no or mild symptoms.</td>
+            </tr>
+            <tr>
+                <td>Inheritance</td>
+                <td>
+                    <strong>Major + Major:</strong> All offspring will have Major Thalassemia.<br>
+                    <strong>Major + Minor:</strong> 50% chance of having Major Thalassemia, 50% chance of being a carrier (Minor).<br>
+                    <strong>Minor + Minor:</strong> 25% chance of having Major Thalassemia, 50% chance of being a carrier (Minor), 25% chance of having no thalassemia.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    
+        <p>Learn more about the Thalassemia campaign and how you can contribute to raising awareness.</p>
+        <a class="know-more-btn" href="https://www.cdc.gov/ncbddd/thalassemia/features/international-thalassemia.html">Know More</a>
+    </div>
+<div class="camp">
+    <h1>TAKE YOUR THALASSEMIA TEST NOW !! </h1>
+    <a class="test"  href="https://www.mayoclinic.org/diseases-conditions/thalassemia/diagnosis-treatment/drc-20355001">Test Now</a>
+    
+</div>
+    <div class="pintrest">
+        <h1>"The blood you donate today will give someone a chance to live, love, and laugh tomorrow "</h1>
+        <img src="./blood3.jpg" alt="data">
+       
+    </div>
+    <div class="rand">
+        <img src="camp.jpg" alt="img campaign">
+        <div class="randleft">
+            <h1>JOIN OUR <br>BLOOD DONATION <br>CAMPAIGN !</h1>
+            <a href="https://paho.org/en/topics/blood/world-blood-donor-day-past-campaigns" target="_blank"> JOIN</a> 
+        </div>
+      
+        
+    </div>
+       
+
+    <!-- <section id="call-to-action">
+        <h2>Ready to save lives?</h2>
+        <p>Join us in our mission to ensure a steady supply of blood for those in need.</p>
+        <a href="contact.html" class="btn">Get Involved</a>
+    </section> -->
+
+    <footer class="footer">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="donor.html">Donate</a>
+            </li>
+          
+            <li class="nav-item">
+                <a class="nav-link" href="LFB.html">Looking for Blood</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.php">Sign-in</a>
+            </li>
+        </ul>
+        <p class="text-center">&copy; 2024 Blood Bank Management System. All rights reserved.</p>
+        <p class="text-center"> Made by Nidhi Dattani and Vidya Sinha.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

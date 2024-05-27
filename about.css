@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet');   
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.navbar-brand {
+    margin-left: 20px;
+   
+    font-family: "El Messiri", sans-serif; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
+}
+
+.firsttitle{
+    margin-top: 50px;
+    height: 20px;
+    text-align: center;
+    /* font-style:; */
+    /* background-color: #fbbdae; */
+    
+}
+.first{
+    padding: 2vw;
+    text-align: center;
+    justify-content: center;
+}
+.second{
+    background-color: rgb(227, 221, 221);
+    flex: 0 0 auto;
+    height: 400px;
+    border: 2px solid #c4bebf;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 70px;
+    width: 90%;
+}
+
+.faq{
+    padding:8%;
+    /* margin-top: 5%; */
+}
+.faq h2{
+   text-align: center;
+   font-size: xx-large;
+}
+
+@media (max-width:400px) {
+    .main{
+        font-size: x-small;
+    }
+    .firsttitle h1{
+        font-size: medium;
+    }
+    .first h3{
+        font-size: small;
+    }
+    .second{
+        width: 100%;
+        margin: 0%;
+        
+        height: 500px;
+    }
+    .faq h2{
+        font-size: larger;
+    }
+}
+
+
+
+
+
