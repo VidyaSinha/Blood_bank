@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Blood Requests</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the updated CSS file -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet'); 
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
 
+    body {
+        
+        font-family: "Barlow", sans-serif;
+  font-weight: 400;
+
+        background-color: #f4f4f4;
+        font-size: 1.2rem;
+        padding-top: 10px; /* Adjusted to accommodate fixed navbar */
+    }
         .navbar-brand {
             font-size: 30px; /* Adjust the font size as needed */
         }
@@ -27,36 +37,75 @@
     margin-right: 10px;
     border-radius: 50%; /* Change font style to italic, you can adjust this to any font style you desire */
 }
+@media screen and (min-width: 992px) {
+        .navbar .container-fluid,
+        .navbar-expand-lg .navbar-collapse,
+        .navbar-expand-lg .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
+        .navbar {
+            width: 18%;
+            height: 100vh;
+            align-items: flex-start;
+        }
+
+        .navbar-brand {
+            margin-left: 0.5rem;
+        }
+
+        .main {
+            margin-left: 20%;
+            padding: 20px; /* Added padding */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+    }
+
+    .navbar .navbar-nav .nav-link {
+        color: #fff;
+        font-size: 1em;
+    }
+
+    .navbar-brand {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
     
     </style>
 <div class="main">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="logo" width="50" height="50">
-            BloodOasis
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="admin.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="req.php">Requests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="donorlist.php">Donor List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log Out</a>
-                </li>
-            </ul>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #9b1422;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="logo" width="50" height="50">
+                BloodOasis
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="admin.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="req.php">Requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donorlist.php">Donor List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Log Out</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Display blood requests here -->

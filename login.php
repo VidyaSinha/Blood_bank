@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    if ($username === "admin" && $password === "123") {
+    if ($username === "admin" && $password === "123") { 
         // Redirect to admin.html
         header("Location: admin.php");
         exit();
