@@ -77,29 +77,29 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For support, please open an issue in the repository or contact the system administrators.
 
-##Landing page 
+## Landing page 
 ![index](https://github.com/user-attachments/assets/1addeeeb-deca-43b1-880e-3f1fd699e38c)
 
-##FORMS
+## FORMS
 ![main form](https://github.com/user-attachments/assets/17caff53-e85a-4905-ac37-6f503f937bbf)
 
 ![form](https://github.com/user-attachments/assets/ae4937f8-afde-4ae9-b79c-697a2a7a7cdf)
 
-##Request Status
+## Request Status
 ![requeststatus](https://github.com/user-attachments/assets/f2e7f36b-ace1-43cd-adce-d02caca1d808)
 
-##Availabilty 
+## Availabilty 
 ![availabilty](https://github.com/user-attachments/assets/b18c75f6-a506-45e9-9ace-04a194c2bcc1)
 
-##ADMIN SIDE
+## ADMIN SIDE
 
-##Admin Dashboard
+## Admin Dashboard
 ![dashboard](https://github.com/user-attachments/assets/e0b48575-c6dc-4e2e-aa10-aa4c1ba0064e)
 
-##Request List
+## Request List
 ![requestlist](https://github.com/user-attachments/assets/fb7d404b-1d14-4c63-8b61-5a622617edf9)
 
-##Donor List
+## Donor List
 ![donorlist](https://github.com/user-attachments/assets/2d267ad7-1f70-43aa-a2da-88364678b007)
 
 
