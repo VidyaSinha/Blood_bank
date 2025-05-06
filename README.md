@@ -65,17 +65,7 @@ BloodOasis is a web-based blood bank management system that facilitates blood do
 4. Submit or manage blood requests
 5. Track request status and view statistics
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Support
-
-For support, please open an issue in the repository or contact the system administrators.
 
 ## Landing page 
 ![index](https://github.com/user-attachments/assets/1addeeeb-deca-43b1-880e-3f1fd699e38c)
@@ -99,7 +89,16 @@ For support, please open an issue in the repository or contact the system admini
 ## Request List
 ![requestlist](https://github.com/user-attachments/assets/fb7d404b-1d14-4c63-8b61-5a622617edf9)
 
-## Donor List
-![donorlist](https://github.com/user-attachments/assets/2d267ad7-1f70-43aa-a2da-88364678b007)
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+For support, please open an issue in the repository or contact the system administrators.
 
